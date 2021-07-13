@@ -1,15 +1,15 @@
 import ShowEpisode from "./Episodes";
-import mapArray from "../episodes.json";
+import episodeArr from "../episodes.json";
 import filterEpisodes from "./FilterEpisodes"
 
 interface nestedProp {
-  searchTerm: any
+  searchTerm: string
 }
 
 function GetEpisode(props: nestedProp): JSX.Element {
   return (
     <section className = "columns">
-      {filterEpisodes(mapArray, props.searchTerm)
+      {filterEpisodes(episodeArr, props.searchTerm)
         .map((ep) => (
         <ShowEpisode
           key={ep.id}

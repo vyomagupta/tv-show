@@ -17,10 +17,10 @@ function App(): JSX.Element {
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         />
-      <MainContent 
+      <MainContent
         searchTerm={searchTerm}
         />
-      <Footer />
+      <Footer/>
     </div>
   );
 }
