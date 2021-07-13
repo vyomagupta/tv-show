@@ -1,6 +1,6 @@
 import episodeArr from "../episodes.json";
 import {useState} from "react";
-import filterEpisodes from "./FilterEpisodes"
+import filterEpisodes from "./Episodesfilter"
 
 interface searchProps {
    // setSearchTerm: React.Dispatch<React.SetStateAction<string>>

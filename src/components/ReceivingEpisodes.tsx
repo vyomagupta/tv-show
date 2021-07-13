@@ -1,12 +1,12 @@
 import ShowEpisode from "./Episodes";
 import episodeArr from "../episodes.json";
-import filterEpisodes from "./FilterEpisodes"
+import filterEpisodes from "./Episodesfilter"
 
 interface nestedProp {
   searchTerm: string
 }
 
-function GetEpisode(props: nestedProp): JSX.Element {
+function receivingEpisodes(props: nestedProp): JSX.Element {
   return (
     <section className = "columns">
       {filterEpisodes(episodeArr, props.searchTerm)
@@ -32,4 +32,4 @@ function GetEpisode(props: nestedProp): JSX.Element {
   );
 }
 
-export default GetEpisode;
+export default receivingEpisodes;

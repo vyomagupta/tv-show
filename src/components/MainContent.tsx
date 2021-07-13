@@ -1,4 +1,4 @@
-import GetEpisode from "./GetEpisode";
+import GetEpisode from "./ReceivingEpisodes";
 
 interface nestedProp {
     searchTerm: string
