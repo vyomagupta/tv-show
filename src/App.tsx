@@ -1,25 +1,28 @@
-//import { greet } from "./utils/greet";
-// import episodes from './episodes.json'
-import Episodes from "./components/Episodes";
-import Search from "./components/Search";
-import Select from "./components/Select"
-import { useState } from "react";
+
+import MainContent from "./components/MainContent";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import SearchBar from "./components/SearchBar";
+import "./App.css";
+import {useState} from "react";
+
 
 function App(): JSX.Element {
-  const [search, setSearch] = useState<string>("");
-
+  const [searchTerm, setSearchTerm] = useState("")
+  
   return (
     <div>
-    <h1>TV Shows</h1> 
-      <Search setSearch={setSearch} />
-      <Select /> 
-      <Episodes search={search} />
-     
+      <Header />
+      <SearchBar 
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        />
+      <MainContent 
+        searchTerm={searchTerm}
+        />
+      <Footer />
     </div>
   );
 }
 
 export default App;
-
-// console.log(`Imported ${episodes.length} episode(s)`);
-// console.log(`First episode's name is ${episodes[0].name}`);
