@@ -1,9 +1,7 @@
 import episodeArr from "../episodes.json";
-import {useState} from "react";
-import filterEpisodes from "./Episodesfilter"
+import filterEpisodes from "./FilterEpisodes"
 
 interface searchProps {
-   // setSearchTerm: React.Dispatch<React.SetStateAction<string>>
     setSearchTerm(term: string): void
     searchTerm: string
 }
@@ -30,7 +28,7 @@ function SearchBar(props: searchProps): JSX.Element {
                 </select>
             </div>
             <div>
-                <p className="displayBar">Displaying {episodeCount.length}/{episodeArr.length}</p>
+                <p className="displayBar">Showing {episodeCount.length}/{episodeArr.length}</p>
             </div>
         </div>
         )

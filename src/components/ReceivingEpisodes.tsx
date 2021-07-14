@@ -1,6 +1,6 @@
 import ShowEpisode from "./Episodes";
 import episodeArr from "../episodes.json";
-import filterEpisodes from "./Episodesfilter"
+import filterEpisodes from "./FilterEpisodes"
 
 interface nestedProp {
   searchTerm: string
